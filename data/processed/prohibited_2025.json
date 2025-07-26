@@ -159,17 +159,33 @@
   },
   "S1.1.": {
     "Misc": [
+      "1-Androstenediol",
       "Androstenedione",
       "Bolasterone",
+      "1-Androstenedione",
       "Boldenone",
       "Boldione",
+      "1-Androsterone",
+      "1-Epiandrosterone",
       "Clostebol",
+      "1-Testosterone",
+      "4-Androstenediol",
+      "4-Hydroxytestosterone",
       "Desoxymethyltestosterone",
+      "5-Androstenedione",
       "Dimethandrolone",
+      "7ɑ-Hydroxy-DHEA nortestosterone",
+      "7ß-Hydroxy-DHEA",
       "Drostanolone",
+      "7-Keto-DHEA",
       "Epiandrosterone",
+      "11ß-Methyl-19-nortestosterone 17-one",
+      "17ɑ-Methylepithiostanol",
       "Epi-dihydrotestosterone",
+      "19-Norandrostenediol",
+      "19-Norandrostenedione",
       "Epitestosterone",
+      "Androst-4-ene-3,11,17- trione",
       "Ethylestrenol",
       "Androstanolone",
       "F ormebolone",
@@ -190,6 +206,7 @@
       "Prasterone",
       "Methasterone",
       "Prostanozol",
+      "Methyl-1-testosterone",
       "Quinbolone",
       "Methylclostebol",
       "S tanozolol",
@@ -225,7 +242,8 @@
   "S2.2.2": {},
   "S2.2.3": {
     "Misc": [
-      "growth hormone analogues, e.g. lonapegsomatropin, somapacitan and somatrogon"
+      "growth hormone analogues, e.g. lonapegsomatropin, somapacitan and somatrogon",
+      "growth hormone fragments, e.g. AOD-9604 and hGH 176-191"
     ]
   },
   "S2.2.4": {
@@ -239,14 +257,23 @@
     "Misc": [
       "Fibroblast growth factors",
       "Hepatocyte growth factor",
+      "Insulin-like growth factor 1",
       "Mechano growth factors",
       "Platelet-derived growth factor",
+      "Thymosin-ß4 and its derivatives e.g. TB-500",
       "Vascular endothelial growth factor"
     ]
   },
   "S4.1.": {
     "Misc": [
+      "2-Androstenol",
+      "Androsta-1,4,6-triene-3,17-dione",
+      "2-Androstenone",
+      "3-Androstenol",
+      "Androsta-3,5-diene-7,17-dione",
+      "3-Androstenone",
       "Exemestane",
+      "4-Androstene-3,6,17 trione",
       "Formestane",
       "Aminoglutethimide",
       "Letrozole",
@@ -280,7 +307,8 @@
   "S4.4.1": {
     "Misc": [
       "Activators of the AMP-activated protein kinase",
-      "Peroxisome proliferator-activated receptor delta"
+      "Peroxisome proliferator-activated receptor delta",
+      "Rev-erbɑ agonists, e.g. SR9009, SR9011"
     ]
   },
   "S4.4.2": {},
@@ -340,34 +368,40 @@
   },
   "S6.B:": {
     "Misc": [
-      "Epinephrine****",
+      "2-phenylpropan-1-amine",
+      "Epinephrine",
       "Nikethamide",
       "Norfenefrine",
       "Etamivan",
       "Octodrine",
-      "Ethylphenidate hexylamine)",
+      "3-Methylhexan-2-amine",
+      "Ethylphenidate hexylamine",
       "Etilamfetamine",
       "Octopamine",
+      "4-Fluoromethylphenidate",
       "Etilefrine",
       "Oxilofrine",
+      "4-Methylhexan-2-amine",
       "Famprofazone",
+      "4-Methylpentan-2-amine",
       "Heptaminol",
       "Phenethylamine",
       "Hydroxyamfetamine",
+      "5-Methylhexan-2-amine",
       "Phenmetrazine",
       "Isometheptene",
       "Propylhexedrine",
       "Levmetamfetamine",
-      "Pseudoephedrine*****",
+      "Pseudoephedrine",
       "Benzfetamine",
       "Meclofenoxate",
       "Selegiline",
-      "Cathine**",
+      "Cathine",
       "Methylenedioxymetham-",
       "Sibutramine",
       "Cathinone and its ana-",
       "Dimetamfetamine [",
-      "Ephedrine***",
+      "Ephedrine",
       "Methylphenidate",
       "Tesofensine",
       "Midodrine",
@@ -377,8 +411,8 @@
       "Clonidine, guanfacine",
       "Imidazoline derivatives for dermatological, nasal, ophthalmic or otic use",
       "Bupropion, caffeine, nicotine, phenylephrine, phenylpropanolamine, pipradrol, and synephrine: These substances are included in the",
-      "* C athine",
-      "*** Epinephrine"
+      "C athine",
+      "Epinephrine"
     ],
     "15": []
   }
