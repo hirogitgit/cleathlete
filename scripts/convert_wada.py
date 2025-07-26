@@ -1,50 +1,106 @@
-import re, json, yaml, pdfplumber, pathlib
+#!/usr/bin/env python
+# coding: utf-8
+"""
+PDF → YAML/JSON 変換スクリプト（WADA 禁止表 2025 年版）
+Usage:
+    python scripts/convert_wada.py
+"""
 
-PDF_PATH = "data/raw/wada2025.pdf"
-OUT_YAML = "data/processed/prohibited_2025.yaml"
-OUT_JSON = "data/processed/prohibited_2025.json"
+import json
+import re
+from pathlib import Path
 
-# ① PDF を読み込んで文字列リスト化
-pages_text = []
+import pdfplumber
+import yaml
+
+# ---------------------------------------------------------------------
+# 設定
+# ---------------------------------------------------------------------
+PDF_PATH = Path("data/raw/wada2025.pdf")
+OUT_YAML = Path("data/processed/prohibited_2025.yaml")
+OUT_JSON = Path("data/processed/prohibited_2025.json")
+
+# 出力フォルダが無い場合は作成
+OUT_YAML.parent.mkdir(parents=True, exist_ok=True)
+
+
+# ---------------------------------------------------------------------
+# ノイズ行判定関数
+# ---------------------------------------------------------------------
+def is_noise(line: str) -> bool:
+    """
+    以下に当てはまる行は物質名ではなく脚注／説明文とみなして除外。
+    - しきい値説明: 'Prohibited when ... micrograms'
+    - 長文説明: 'These substances are included in the ...'
+    - OOC 注:    'Also prohibited Out-of-Competition'
+    """
+    noise_patterns = [
+        r"Prohibited when",
+        r"These substances",
+        r"Also prohibited",
+    ]
+    return any(re.search(p, line, re.I) for p in noise_patterns)
+
+
+# ---------------------------------------------------------------------
+# PDF から物質名を抽出
+# ---------------------------------------------------------------------
+bullet_re = re.compile(r"^[•\*\-]\s*(.+)")  # 箇条書き行（• * - で始まる）
+
+names: list[str] = []
+buffer = ""
+
 with pdfplumber.open(PDF_PATH) as pdf:
     for page in pdf.pages:
-        pages_text.extend(page.extract_text().splitlines())
+        for raw_line in page.extract_text().splitlines():
+            line = raw_line.strip()
 
-# ② 正規表現パターン
-section_re = re.compile(r"^(S\d|M\d|P\d)\b")        # 例: S1, M2, P1
-subhead_re = re.compile(r"^[•*-]\s*(.+)")           # 先頭が • や - の行
-chem_re    = re.compile(r"^•\s*(.+)")               # 箇条書きの物質名
+            m = bullet_re.match(line)
+            if not m:
+                continue  # 箇条書き以外はスキップ
 
-data = {}
-current_sec = current_sub = None
+            text = m.group(1)
 
-for line in pages_text:
-    line = line.strip()
-    # 章タイトル（S0, S1 …）
-    if section_re.match(line):
-        current_sec = line.split()[0]               # "S1" 部分
-        data.setdefault(current_sec, {})
-        current_sub = None                          # サブヘッダをリセット
-        continue
+            # (1) 前行がカンマ末尾で切れていた場合は連結
+            if buffer:
+                text = buffer + " " + text
+                buffer = ""
 
-    # サブヘッダ（例: "ANABOLIC ANDROGENIC STEROIDS (AAS)"）
-    if subhead_re.match(line) and line.isupper():
-        current_sub = subhead_re.match(line).group(1).title()
-        data[current_sec].setdefault(current_sub, [])
-        continue
+            # (2) ノイズ行は除外
+            if is_noise(text):
+                continue
 
-    # 物質名
-    if chem_re.match(line):
-        chem = chem_re.match(line).group(1).split(" (")[0]  # 括弧以降カット
-        # デフォルトのサブヘッダが無い場合は "Misc" に入れる
-        bucket = current_sub or "Misc"
-        data[current_sec].setdefault(bucket, []).append(chem)
+            # (3) 行末がカンマなら次行と連結するためバッファへ
+            if text.endswith(","):
+                buffer = text.rstrip(",")
+                continue
 
-# ③ YAML と JSON に保存
-with open(OUT_YAML, "w", encoding="utf-8") as f:
+            # (4) 単語中に紛れ込んだスペースを除去（C athine → Cathine）
+            text = re.sub(r"(?<=\w)\s+(?=\w)", "", text)
+
+            # (5) 括弧以降は補足情報なのでカット
+            text = text.split(" (")[0].strip()
+
+            names.append(text)
+
+# ---------------------------------------------------------------------
+# データ構造を作成（最小例: S6/STIMULANTS のみ）
+# ---------------------------------------------------------------------
+data = {
+    "S6": {
+        "STIMULANTS": sorted(set(names))
+    }
+}
+
+# ---------------------------------------------------------------------
+# YAML / JSON に保存
+# ---------------------------------------------------------------------
+with OUT_YAML.open("w", encoding="utf-8") as f:
     yaml.safe_dump(data, f, allow_unicode=True)
 
-with open(OUT_JSON, "w", encoding="utf-8") as f:
+with OUT_JSON.open("w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"✅ 変換完了: {pathlib.Path(OUT_YAML).resolve()}")
+print(f"✅ 変換完了: {len(names)} 物質を抽出しました。")
+print(f" - YAML:  {OUT_YAML}")
+print(f" - JSON:  {OUT_JSON}")
