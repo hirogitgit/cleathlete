@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 """
-convert_wada.py  ─ WADA 禁止表 PDF → YAML / JSON
+converter.py  –  2 段組 PDF に対応した左右列順の最小パーサ
+
+1. ページ幅を 50% で左右に分割して左→右の順にテキスト走査
+2. 章タイトル (S1 など) を検知後、箇条書き行 (•, *, -) をそのまま収集
+3. YAML / JSON を data/processed/ に出力
 """
 
 from __future__ import annotations
-
 import json
 import re
 import sys
@@ -14,98 +17,73 @@ from typing import Dict, List
 import pdfplumber
 import yaml
 
-# ─────────────── パス設定 ───────────────
-PROJ_ROOT   = Path(__file__).resolve().parents[1]
-RAW_DIR     = PROJ_ROOT / "data" / "raw"
-PROC_DIR    = PROJ_ROOT / "data" / "processed"
+# ──────────────── パス設定 ────────────────
+ROOT = Path(__file__).resolve().parents[2]
+RAW_DIR = ROOT / "data" / "raw"
+OUT_DIR = ROOT / "data" / "processed"
 DEFAULT_PDF = RAW_DIR / "wada2025.pdf"
 
-PROC_DIR.mkdir(parents=True, exist_ok=True)
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# ─────────────── 正規表現 ───────────────
-SECTION_RE   = re.compile(r"^(S\d|M\d|P\d)\b")
-BULLET_LINE  = re.compile(r"^[•*-]\s*(.+)")
-SUBHEAD_ALL  = re.compile(r"^[A-Z0-9][A-Z0-9 \-()]+$")
+# ──────────────── パターン ────────────────
+SEC_RE   = re.compile(r"^(S\d|M\d|P\d)\b")   # 章タイトル
+BULLET_RE = re.compile(r"^[•*-]\s*(.+)")     # 箇条書き
+ALL_CAPS  = re.compile(r"^[A-Z0-9][A-Z0-9 \-()]+$")  # サブヘッダ
 
-BULLET_SEP_RE = re.compile(r"\s*[•;・·●‧∙]\s*")
-
-EXCLUDE_PAT = re.compile(
-    r"""
-    \d\ ?(micrograms?|µg|μg|mg/ml|ml|hours?) |
-    \b(maximum|inhaled|out\-of\-competition)\b |
-    Archery|Shooting|Cycling
-    """,
-    re.I | re.X,
-)
-
-# ─────────────── ユーティリティ ───────────────
-def looks_like_substance(name: str) -> bool:
-    return not EXCLUDE_PAT.search(name)
-
-def clean_token(tok: str) -> str:
-    tok = tok.strip(" *;")
-    tok = re.sub(r"\s{2,}", " ", tok)
-    tok = re.split(r"\s*\(", tok, 1)[0].strip()
-    tok = tok.rstrip(")")
-    return tok
-
-# ─────────────── 解析本体 ───────────────
-def parse_pdf(pdf_path: Path) -> Dict[str, Dict[str, List[str]]]:
+# ──────────────── PDF 解析 ────────────────
+def parse_pdf(pdf: Path) -> Dict[str, Dict[str, List[str]]]:
     data: Dict[str, Dict[str, List[str]]] = {}
-    current_sec = current_sub = None
+    sec = sub = None
 
-    with pdfplumber.open(pdf_path) as pdf:
-        for page in pdf.pages:
-            for raw_line in page.extract_text().splitlines():
-                line = raw_line.strip()
+    with pdfplumber.open(pdf) as pdfdoc:
+        for page in pdfdoc.pages:
+            mid_x = page.width / 2
+            # 左列 → 右列 の順で処理
+            for bbox in [(0, 0, mid_x, page.height), (mid_x, 0, page.width, page.height)]:
+                col = page.crop(bbox)
+                for raw in col.extract_text().splitlines():
+                    line = raw.strip()
 
-                # 章タイトル
-                if SECTION_RE.match(line):
-                    current_sec = line.split()[0]
-                    data.setdefault(current_sec, {})
-                    current_sub = None
-                    continue
-
-                # サブヘッダ（全大文字）
-                if SUBHEAD_ALL.match(line) and not BULLET_LINE.match(line):
-                    if current_sec is None:       # ← 追加ガード
+                    if SEC_RE.match(line):
+                        sec = line.split()[0]
+                        data.setdefault(sec, {})
+                        sub = None
                         continue
-                    current_sub = line.title()
-                    data[current_sec].setdefault(current_sub, [])
-                    continue
 
-                # 箇条書き行
-                m = BULLET_LINE.match(line)
-                if not m or current_sec is None:  # ← 追加ガード
-                    continue
+                    if sec is None:
+                        continue  # 章確定前は無視
 
-                for token in BULLET_SEP_RE.split(m.group(1)):
-                    token = clean_token(token)
-                    if token and looks_like_substance(token):
-                        bucket = current_sub or "Misc"
-                        data[current_sec].setdefault(bucket, []).append(token)
+                    if ALL_CAPS.match(line) and not BULLET_RE.match(line):
+                        sub = line.title()
+                        data[sec].setdefault(sub, [])
+                        continue
+
+                    m = BULLET_RE.match(line)
+                    if m:
+                        bucket = sub or "Misc"
+                        data[sec].setdefault(bucket, []).append(m.group(1).strip())
 
     return data
 
-# ─────────────── ファイル出力 ───────────────
-def convert(pdf_path: Path) -> None:
-    year_match = re.search(r"(\d{4})", pdf_path.stem)
-    outstem = f"prohibited_{year_match.group(1) if year_match else pdf_path.stem}"
-    yaml_path = PROC_DIR / f"{outstem}.yaml"
-    json_path = PROC_DIR / f"{outstem}.json"
+# ──────────────── 出力 ────────────────
+def convert(pdf: Path) -> None:
+    year = re.search(r"(\d{4})", pdf.stem)
+    stem = f"prohibited_{year.group(1) if year else pdf.stem}"
+    yaml_p = OUT_DIR / f"{stem}.yaml"
+    json_p = OUT_DIR / f"{stem}.json"
 
-    result = parse_pdf(pdf_path)
+    parsed = parse_pdf(pdf)
+    yaml_p.write_text(yaml.safe_dump(parsed, allow_unicode=True), encoding="utf-8")
+    json_p.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    with yaml_path.open("w", encoding="utf-8") as f:
-        yaml.safe_dump(result, f, allow_unicode=True)
-    with json_path.open("w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    print(f"✅ 変換完了\n  YAML: {yaml_p}\n  JSON: {json_p}")
 
-    print(f"✅ 変換完了:\n  YAML → {yaml_path}\n  JSON → {json_path}")
+# ──────────────── CLI ────────────────
+def cli() -> None:
+    target = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_PDF
+    if not target.exists():
+        sys.exit(f"❌ PDF が見つかりません: {target}")
+    convert(target)
 
-# ─────────────── CLI ───────────────
 if __name__ == "__main__":
-    pdf_file = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_PDF
-    if not pdf_file.exists():
-        sys.exit(f"❌ PDF が見つかりません: {pdf_file}")
-    convert(pdf_file)
+    cli()

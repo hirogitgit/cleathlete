@@ -1,296 +1,333 @@
 {
   "S0": {
-    "Prohibited At All Times (In- And Out-Of-Competition)": []
+    "Prohibited At All Times (In": [],
+    "Ved Substances": [],
+    "N- And Out-Of-Competition)": []
   },
   "S1": {
-    "Anabolic Agents": [],
-    "Prohibited At All Times (In- And Out-Of-Competition)": []
+    "Anabolic Ag": [],
+    "Prohibited At All Times (In": []
   },
   "S2": {
-    "Prohibited At All Times (In- And Out-Of-Competition)": []
+    "Peptide Horm": [],
+    "Growth Fac": [],
+    "Substances": [],
+    "Prohibited At All Times (In": []
   },
   "S3": {
-    "Beta-2 Agonists": [],
-    "Prohibited At All Times (In- And Out-Of-Competition)": [
-      "Arformoterol",
-      "Indacaterol",
-      "Reproterol",
-      "Tretoquinol",
-      "Fenoterol",
-      "Levosalbutamol",
-      "Salbutamol",
-      "Formoterol",
-      "Olodaterol",
-      "Salmeterol",
-      "Tulobuterol",
-      "Higenamine",
-      "Procaterol",
-      "Terbutaline",
-      "Vilanterol"
-    ],
-    "Exceptions": [],
-    "Note": []
-  },
-  "S4": {
-    "Hormone And": [],
-    "Metabolic Modulators": [],
-    "Prohibited At All Times (In- And Out-Of-Competition)": []
-  },
-  "S5": {
-    "Diuretics And": [],
-    "Masking Agents": [],
-    "Prohibited At All Times (In- And Out-Of-Competition)": [
-      "Diuretics such as:",
-      "Vaptans, e.g. conivaptan, mozavaptan, tolvaptan",
-      "Plasma expanders by intravenous administration such as:",
-      "Desmopressin",
-      "Probenecid"
+    "Beta-2 Agon": [],
+    "Prohibited At All Times (In": [
+      "Arformoterol • Indacaterol",
+      "Fenoterol • Levosalbutamol",
+      "Formoterol • Olodaterol",
+      "Higenamine • Procaterol"
     ],
     "Exceptions": [
-      "Drospirenone",
-      "pamabrom",
-      "and topical ophthalmic administration of carbonic",
-      "Local administration of felypressin in dental anaesthesia."
+      "Inhaled salbutamol: maximum 1600 microgr",
+      "Inhaled formoterol: maximum delivered dose",
+      "Inhaled salmeterol: maximum 200 microgram",
+      "Inhaled vilanterol: maximum 25 micrograms"
     ],
     "Note": [],
+    "Nists": [],
+    "N- And Out-Of-Competition)": [
+      "Reproterol • Tretoquinol",
+      "Salbutamol",
+      "Salmeterol • Tulobuterol",
+      "Terbutaline • Vilanterol"
+    ]
+  },
+  "S4": {
+    "Hormone An": [],
+    "Metabolic M": [],
+    "Prohibited At All Times (In": []
+  },
+  "S5": {
+    "Diuretics An": [],
+    "Masking Age": [],
+    "Prohibited At All Times (In": [
+      "Diuretics such as:",
+      "Vaptans, e.g. conivaptan, mozavaptan, tolvapt",
+      "Plasma expanders by intravenous administr",
+      "Desmopressin;",
+      "Probenecid;"
+    ],
+    "Exceptions": [
+      "Drospirenone; pamabrom; and topical ophth",
+      "Local administration of felypressin in dental"
+    ],
+    "Note": [],
+    "Nd": [],
+    "Ents": [],
+    "N- And Out-Of-Competition)": [],
     "12": [],
-    "Prohibited Methods": []
+    "Prohibited M": []
   },
   "M1": {},
   "S6": {
     "Stimulants": [],
-    "Prohibited In-Competition": []
+    "Prohibited In-Competitio": []
   },
   "S7": {
     "Narcotics": [],
-    "Prohibited In-Competition": [
-      "Buprenorphine",
-      "Fentanyl and its",
-      "Morphine",
-      "Pentazocine",
+    "Prohibited In-Competitio": [
+      "Buprenorphine • Fentanyl and its",
       "Dextromoramide",
-      "Nicomorphine",
-      "Pethidine",
-      "Diamorphine",
-      "Hydromorphone",
-      "Oxycodone",
-      "Tramadol"
+      "Diamorphine • Hydromorphone"
+    ],
+    "On": [
+      "Morphine • Pentazocine",
+      "Nicomorphine • Pethidine",
+      "Oxycodone • Tramadol",
+      "Oxymorphone"
     ],
     "16": []
   },
   "S8": {
-    "Cannabinoids": [],
-    "Prohibited In-Competition": [
-      "In cannabis",
-      "Natural and synthetic tetrahydrocannabinols",
-      "Synthetic cannabinoids that mimic the effects of THC"
+    "Cannabinoid": [],
+    "Prohibited In-Competitio": [
+      "In cannabis (hashish, marijuana) and cannab",
+      "Natural and synthetic tetrahydrocannabinol",
+      "Synthetic cannabinoids that mimic the effec"
     ],
     "Exceptions": [
       "Cannabidiol"
     ],
+    "Ds": [],
+    "On": [],
     "17": []
   },
   "S9": {
-    "Substances Prohibited In Particular Sports": [],
-    "Glucocorticoids": [],
-    "Prohibited In-Competition": [
-      "Beclometasone",
-      "Dexamethasone",
-      "Mometasone",
-      "Betamethasone",
-      "Flunisolide",
-      "Prednisolone",
-      "Budesonide",
-      "Fluocortolone",
-      "Prednisone",
-      "Ciclesonide",
-      "Fluticasone",
-      "Triamcinolone acetonide",
-      "Cortisone",
-      "Hydrocortisone",
-      "Deflazacort",
-      "Methylprednisolone"
+    "Substances Prohibited In Part": [],
+    "Glucocortic": [],
+    "Prohibited In-Competitio": [
+      "Beclometasone • Dexamethaso",
+      "Betamethasone • Flunisolide",
+      "Budesonide • Fluocortolone",
+      "Ciclesonide • Fluticasone",
+      "Cortisone • Hydrocortiso",
+      "Deflazacort • Methylpredni"
     ],
     "Note": [
-      "Other routes of administration"
+      "Other routes of administration (including inh"
+    ],
+    "Coids": [],
+    "On": [
+      "Prednisolone",
+      "Triamcinolone acetonide"
     ],
     "18": []
   },
   "P1": {
-    "The 2025 Prohibited List": [],
-    "World Anti-Doping Code": [],
+    "Ntents": [],
+    "Bited At All Times": [],
+    "Bited In-Competition": [],
+    "Ticular Sports": [],
+    "The 2025 Pro": [],
+    "World Anti-": [],
     "Valid 1 January 2025": [],
-    "Beta-Blockers": [],
-    "Prohibited In Particular Sports": [
-      "Underwater sports",
-      "Automobile",
-      "Billiards",
-      "Darts",
-      "Golf",
-      "Mini-Golf",
-      "Acebutolol",
-      "Bunolol",
-      "Labetalol",
-      "Oxprenolol",
-      "Alprenolol",
-      "Carteolol",
-      "Metipranolol",
-      "Pindolol",
-      "Atenolol",
-      "Carvedilol",
-      "Metoprolol",
-      "Propranolol",
-      "Betaxolol",
-      "Celiprolol",
-      "Nadolol",
-      "Sotalol",
-      "Bisoprolol",
-      "Esmolol",
-      "Nebivolol",
-      "Timolol"
+    "Ohibited List": [
+      "DOPING CODE",
+      "Doping Code, “for purposes of the application"
+    ],
+    "4 9232": [],
+    "4 8650": [],
+    "Beta-Blocke": [],
+    "Prohibited In Particular": [
+      "Archery (WA)*",
+      "Automobile (FIA)",
+      "Billiards (all disciplines) (WCBS)",
+      "Darts (WDF)",
+      "Golf (IGF)",
+      "Mini-Golf (WMF)",
+      "Shooting (ISSF, IPC)*",
+      "Also prohibited Out-of-Competition",
+      "Acebutolol • Bunolol",
+      "Alprenolol • Carteolol",
+      "Atenolol • Carvedilol",
+      "Betaxolol • Celiprolol",
+      "Bisoprolol • Esmolol"
+    ],
+    "Ers": [],
+    "R Sports": [
+      "Underwater sports (CMAS)* in all",
+      "Labetalol • Oxprenolol",
+      "Metipranolol • Pindolol",
+      "Metoprolol • Propranolol",
+      "Nadolol • Sotalol",
+      "Nebivolol • Timolol"
     ],
     "19": [],
     "Index": [],
+    "Ace-031": [],
     "20": [],
-    "D F": [],
     "21": [],
+    "Lgd-403": [
+      "testosterone, 6"
+    ],
     "22": [],
     "23": []
   },
   "S1.1.": {
     "Misc": [
-      "1-Androstenediol",
-      "Androstenedione",
-      "Bolasterone",
-      "1-Androstenedione",
-      "Boldenone",
-      "Boldione",
-      "1-Androsterone",
-      "1-Epiandrosterone",
-      "Clostebol",
-      "1-Testosterone",
-      "4-Androstenediol",
+      "1-Androstenediol (5ɑ-androst-1-ene-3ß,",
+      "1-Androstenedione (5ɑ-androst-1-ene-3,",
+      "1-Androsterone (3ɑ-hydroxy-5a-androst-1-",
+      "1-Epiandrosterone (3ß-hydroxy-5ɑ-androst-",
+      "1-Testosterone (17ß-hydroxy-5ɑ-androst-1-",
+      "4-Androstenediol (androst-4-ene-3ß,",
       "4-Hydroxytestosterone",
-      "Desoxymethyltestosterone",
-      "5-Androstenedione",
-      "Dimethandrolone",
-      "7ɑ-Hydroxy-DHEA nortestosterone",
+      "5-Androstenedione (androst-5-ene-3,17-dione)",
+      "7ɑ-Hydroxy-DHEA",
       "7ß-Hydroxy-DHEA",
-      "Drostanolone",
       "7-Keto-DHEA",
-      "Epiandrosterone",
-      "11ß-Methyl-19-nortestosterone 17-one",
-      "17ɑ-Methylepithiostanol",
-      "Epi-dihydrotestosterone",
-      "19-Norandrostenediol",
-      "19-Norandrostenedione",
-      "Epitestosterone",
+      "11ß-Methyl-19-nortestosterone",
+      "17ɑ-Methylepithiostanol (epistane)",
+      "19-Norandrostenediol (estr-4-ene-3,17-diol)",
+      "19-Norandrostenedione (estr-4-ene-3,17-dione)",
       "Androst-4-ene-3,11,17- trione",
-      "Ethylestrenol",
-      "Androstanolone",
-      "F ormebolone",
-      "Furazabol",
-      "Androstenediol",
+      "Androstanolone (5ɑ-dihydrotestosterone,",
+      "Androstenediol (androst-5-ene-3ß,17ß-diol)",
       "G estrinone",
-      "Norclostebol",
       "Mestanolone",
-      "Norethandrolone",
       "Mesterolone",
-      "Oxabolone",
-      "Metandienone",
-      "O xandrolone",
-      "Oxymesterone",
+      "Metandienone (17ß-hydroxy-17ɑ-",
       "Metenolone",
-      "O xymetholone",
       "M ethandriol",
-      "Prasterone",
-      "Methasterone",
-      "Prostanozol",
-      "Methyl-1-testosterone",
-      "Quinbolone",
+      "Methasterone (17ß-hydroxy-2ɑ,17ɑ-dimethyl-",
+      "Methyl-1-testosterone (17ß-hydroxy-17ɑ-",
       "Methylclostebol",
-      "S tanozolol",
-      "Methyldienolone",
-      "Stenbolone",
-      "Testosterone",
-      "Methylnortestosterone",
+      "Methyldienolone (17ß-hydroxy-17ɑ-",
+      "Methylnortestosterone (17ß-hydroxy-17ɑ-",
       "Methyltestosterone",
-      "Tibolone",
-      "Metribolone",
+      "Metribolone (methyltrienolone, 17ß-hydroxy-",
       "Mibolerone",
-      "Trestolone",
-      "Nandrolone",
+      "Nandrolone (19-nortestosterone)",
       "Norboletone"
+    ],
+    "Gents": [],
+    "N- And Out-Of-Competition)": [],
+    "Ids (Aas)": [
+      "Androstenedione (androst-4-ene-3,17-dione)",
+      "Bolasterone",
+      "Boldenone",
+      "Boldione (androsta-1,4-diene-3,17-dione)",
+      "Calusterone",
+      "Clostebol",
+      "D anazol ([1,2]oxazolo[4’,5’:2,3]pregna-4-en-",
+      "Dehydrochlormethyltestosterone (4-chloro-",
+      "Desoxymethyltestosterone (17ɑ-methyl-",
+      "Dimethandrolone (7ɑ,11ß-Dimethyl-19-",
+      "Drostanolone",
+      "Epiandrosterone (3ß-hydroxy-5ɑ-androstan-",
+      "Epi-dihydrotestosterone (17ß-hydroxy-5ß-",
+      "Epitestosterone",
+      "Ethylestrenol (19-norpregna-4-en-17ɑ-ol)",
+      "F luoxymesterone",
+      "F ormebolone",
+      "Furazabol (17ɑ-methyl [1,2,5]"
     ]
   },
-  "S1.2.": {},
+  "S1.2.": {
+    "Gents": [
+      "Norclostebol (4-chloro-17ß-ol-estr-4-en-3-one)",
+      "Norethandrolone",
+      "Oxabolone",
+      "O xandrolone",
+      "Oxymesterone",
+      "O xymetholone",
+      "Prasterone (dehydroepiandrosterone, DHEA,",
+      "Prostanozol (17ß-[(tetrahydropyran-2-yl)oxy]-",
+      "Quinbolone",
+      "S tanozolol",
+      "Stenbolone",
+      "Testosterone",
+      "Tetrahydrogestrinone (17-hydroxy-18a-",
+      "Tibolone",
+      "Trenbolone (17ß-hydroxyestr-4,9,11-trien-3-",
+      "Trestolone (7ɑ-Methyl-19-nortestosterone,"
+    ],
+    "Ment)": []
+  },
   "S2.1.": {},
   "S2.1.1": {},
   "S2.1.2": {},
   "S2.1.3": {},
   "S2.1.4": {},
-  "S2.1.5": {},
+  "S2.1.5": {
+    "N- And Out-Of-Competition)": [],
+    "Agents Affecting Erythropoiesis": [
+      "ß) signalling inhibitors, e.g. luspatercept;"
+    ]
+  },
   "S2.2.": {},
   "S2.2.1": {
     "Misc": [
-      "chorionic gonadotrophin",
-      "luteinizing hormone",
-      "gonadotrophin- releasing hormone",
+      "chorionic gonadotrophin (CG),",
+      "luteinizing hormone (LH),",
+      "gonadotrophin- releasing hormone (G",
       "kisspeptin and its agonist analogues"
     ]
   },
   "S2.2.2": {},
   "S2.2.3": {
     "Misc": [
-      "growth hormone analogues, e.g. lonapegsomatropin, somapacitan and somatrogon",
-      "growth hormone fragments, e.g. AOD-9604 and hGH 176-191"
+      "growth hormone analogues, e.g. lonap",
+      "growth hormone fragments, e.g. AOD-9"
     ]
   },
   "S2.2.4": {
     "Misc": [
-      "growth hormone-releasing hormone",
-      "growth hormone secretagogues",
-      "GH-releasing peptides"
+      "growth hormone-releasing hormone (G",
+      "growth hormone secretagogues (GHS",
+      "GH-releasing peptides (GHRPs) [e.g. al"
     ]
   },
   "S2.3.": {
     "Misc": [
-      "Fibroblast growth factors",
-      "Hepatocyte growth factor",
-      "Insulin-like growth factor 1",
-      "Mechano growth factors",
-      "Platelet-derived growth factor",
-      "Thymosin-ß4 and its derivatives e.g. TB-500",
-      "Vascular endothelial growth factor"
-    ]
+      "Fibroblast growth factors (FGFs)",
+      "Hepatocyte growth factor (HGF)",
+      "Insulin-like growth factor 1 (IGF-1, mecase",
+      "Mechano growth factors (MGFs)",
+      "Platelet-derived growth factor (PDGF)",
+      "Thymosin-ß4 and its derivatives e.g. TB-5",
+      "Vascular endothelial growth factor (VEGF"
+    ],
+    "Ir Releasing Factors": [
+      "9604 and hGH 176-191"
+    ],
+    "Wth Factor Modulators": [],
+    "500": [],
+    "F)": []
   },
   "S4.1.": {
     "Misc": [
-      "2-Androstenol",
-      "Androsta-1,4,6-triene-3,17-dione",
-      "2-Androstenone",
-      "3-Androstenol",
-      "Androsta-3,5-diene-7,17-dione",
-      "3-Androstenone",
-      "Exemestane",
-      "4-Androstene-3,6,17 trione",
-      "Formestane",
+      "2-Androstenol (5ɑ-androst-2-en-17-ol)",
+      "2-Androstenone (5ɑ-androst-2-en-17-one)",
+      "3-Androstenol (5ɑ-androst-3-en-17-ol)",
+      "3-Androstenone (5ɑ-androst-3-en-17-one)",
+      "4-Androstene-3,6,17 trione (6-oxo)",
       "Aminoglutethimide",
-      "Letrozole",
-      "Anastrozole",
-      "Testolactone"
+      "Anastrozole"
     ]
   },
   "S4.2.": {
-    "Misc": [
-      "Bazedoxifene",
-      "Elacestrant",
+    "Selective Estrogen Recept": [
+      "Bazedoxifene • Elacestrant",
+      "Clomifene • Fulvestrant",
+      "Cyclofenil • Ospemifene"
+    ],
+    "Nd": [],
+    "Modulators": [],
+    "N- And Out-Of-Competition)": [
+      "Androsta-1,4,6-triene-3,17-dione",
+      "Androsta-3,5-diene-7,17-dione (arimistane)",
+      "Exemestane",
+      "Formestane",
+      "Letrozole",
+      "Testolactone",
       "Raloxifene",
-      "Clomifene",
-      "Fulvestrant",
       "Tamoxifen",
-      "Cyclofenil",
-      "Ospemifene",
       "Toremifene"
     ],
     "10": []
@@ -298,22 +335,26 @@
   "S4.3.": {
     "Misc": [
       "Activin A-neutralizing antibodies",
-      "Myostatin inhibitors such as:",
-      "Activin receptor IIB competitors such as: – Agents reducing or ablating myostatin",
+      "Activin receptor IIB competitors such as:",
       "Anti-activin receptor IIB antibodies"
     ]
   },
   "S4.4.": {},
   "S4.4.1": {
     "Misc": [
-      "Activators of the AMP-activated protein kinase",
-      "Peroxisome proliferator-activated receptor delta",
+      "Activators of the AMP-activated protein k",
+      "Peroxisome proliferator-activated recepto",
       "Rev-erbɑ agonists, e.g. SR9009, SR9011"
     ]
   },
   "S4.4.2": {},
   "S4.4.3": {},
   "S4.4.4": {
+    "Nd": [],
+    "Modulators": [],
+    "Receptor Iib Activation": [
+      "Myostatin inhibitors such as:"
+    ],
     "11": []
   },
   "M1.": {},
@@ -328,91 +369,94 @@
   "M3.": {},
   "M3.1.": {},
   "M3.2.": {
+    "Methods": [],
+    "N- And Out-Of-Competition)": [],
+    "Blood Components": [],
+    "Pulation": [],
     "13": []
   },
   "S6.A:": {
     "Misc": [
       "Adrafinil",
-      "Fonturacetam",
       "Amfepramone",
       "Amfetamine",
-      "Furfenorex",
       "Amfetaminil",
-      "Hydrafinil",
       "Amiphenazole",
-      "Lisdexamfetamine",
       "Benfluorex",
-      "Mefenorex",
       "Benzylpiperazine",
-      "Mephentermine",
       "Bromantan",
-      "Mesocarb",
       "Clobenzorex",
-      "Metamfetamine",
       "Cocaine",
-      "p-methylamfetamine",
       "Cropropamide",
-      "Modafinil",
       "Crotetamide",
-      "Norfenfluramine",
       "Fencamine",
-      "Phendimetrazine",
       "Fenetylline",
-      "Phentermine",
       "Fenfluramine",
+      "Fenproporex"
+    ],
+    "On": [
+      "Fonturacetam",
+      "Furfenorex",
+      "Hydrafinil (fluorenol)",
+      "Lisdexamfetamine",
+      "Mefenorex",
+      "Mephentermine",
+      "Mesocarb",
+      "Metamfetamine(d-)",
+      "p-methylamfetamine",
+      "Modafinil",
+      "Norfenfluramine",
+      "Phendimetrazine",
+      "Phentermine",
       "Prenylamine",
-      "Fenproporex",
       "Prolintane"
     ],
     "14": []
   },
   "S6.B:": {
     "Misc": [
-      "2-phenylpropan-1-amine",
-      "Epinephrine",
-      "Nikethamide",
-      "Norfenefrine",
+      "2-phenylpropan-1-amine • Epinephrine*",
       "Etamivan",
-      "Octodrine",
-      "3-Methylhexan-2-amine",
-      "Ethylphenidate hexylamine",
-      "Etilamfetamine",
-      "Octopamine",
+      "3-Methylhexan-2-amine • Ethylphenida",
+      "Etilamfetamin",
       "4-Fluoromethylphenidate",
       "Etilefrine",
-      "Oxilofrine",
       "4-Methylhexan-2-amine",
-      "Famprofazone",
-      "4-Methylpentan-2-amine",
-      "Heptaminol",
-      "Phenethylamine",
-      "Hydroxyamfetamine",
-      "5-Methylhexan-2-amine",
-      "Phenmetrazine",
-      "Isometheptene",
-      "Propylhexedrine",
-      "Levmetamfetamine",
-      "Pseudoephedrine",
+      "Famprofazon",
+      "4-Methylpentan-2-amine • Heptaminol",
+      "Hydroxyamfe",
+      "5-Methylhexan-2-amine (parahydroxy",
+      "Isomethepten",
+      "Levmetamfet",
       "Benzfetamine",
-      "Meclofenoxate",
-      "Selegiline",
-      "Cathine",
-      "Methylenedioxymetham-",
-      "Sibutramine",
+      "Meclofenoxa",
+      "Cathine**",
+      "Methylenedio",
       "Cathinone and its ana-",
-      "Dimetamfetamine [",
-      "Ephedrine",
-      "Methylphenidate",
-      "Tesofensine",
-      "Midodrine",
-      "Tuaminoheptane"
+      "Dimetamfetamine [(±)-methyl-2-(",
+      "Ephedrine*** • Methylphenid",
+      "Midodrine"
     ],
     "Exceptions": [
-      "Clonidine, guanfacine",
-      "Imidazoline derivatives for dermatological, nasal, ophthalmic or otic use",
-      "Bupropion, caffeine, nicotine, phenylephrine, phenylpropanolamine, pipradrol, and synephrine: These substances are included in the",
-      "C athine",
-      "Epinephrine"
+      "Clonidine, guanfacine;",
+      "Imidazoline derivatives for dermatological, n",
+      "Bupropion, caffeine, nicotine, phenylephrine, phenylpropanolamine",
+      "* C athine (d-norpseudoephedrine) and its l-isomer: Prohibited when",
+      "** Ephedrine and methylephedrine: Prohibited when the concentrat",
+      "*** Epinephrine (adrenaline): Not prohibited in local administration,",
+      "**** Pseudoephedrine: Prohibited when its concentration in urine is",
+      "*** • Nikethamide",
+      "Norfenefrine",
+      "Octodrine (1,5-dimethyl-",
+      "Oxilofrine",
+      "Phenethylamine",
+      "Phenpromethamine",
+      "Solriamfetol",
+      "Strychnine",
+      "Tenamfetamine",
+      "(naphthalen-2-",
+      "Tesofensine",
+      "Tuaminoheptane"
     ],
     "15": []
   }
