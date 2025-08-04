@@ -1,0 +1,19 @@
+subsection_code,section_code,subsection_name,specified_flag
+S1.1,S1,Anabolic androgenic steroids (AAS),non-specified
+S1.2,S1,Other anabolic agents,non-specified
+S2.1,S2,Erythropoietins (EPO) and agents affecting erythropoiesis,non-specified
+S2.2,S2,Peptide hormones and their releasing factors,non-specified
+S2.3,S2,Growth factors and growth factor modulators,non-specified
+S4.1,S4,Aromatase inhibitors,specified
+S4.2,S4,Anti‑estrogenic substances,specified
+S4.3,S4,Agents preventing activin receptor IIB activation,non-specified
+S4.4,S4,Metabolic modulators,non-specified
+S6.A,S6,Non‑specified stimulants,non-specified
+S6.B,S6,Specified stimulants,specified
+M1.1,M1,Administration or re‑introduction of blood products,non-specified
+M1.2,M1,Artificial enhancement of oxygen transport,non-specified
+M1.3,M1,Intravascular manipulation of blood/components,non-specified
+M2.1,M2,Tampering or sample substitution,non-specified
+M2.2,M2,IV infusions/injections >100 mL per 12 h,specified
+M3.1,M3,Use of nucleic acids altering genome expression,non-specified
+M3.2,M3,Use of normal or genetically modified cells,non-specified

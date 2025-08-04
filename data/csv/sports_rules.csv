@@ -1,0 +1,10 @@
+sport_code,sport_name_en,in_competition,out_competition
+ARCH,Archery,1,1
+SHOO,Shooting,1,1
+UWTR,Underwater sports,1,1
+AUTO,Automobile,1,0
+BILA,Billiards,1,0
+DART,Darts,1,0
+GOLF,Golf,1,0
+WMF,Mini‑golf,1,0
+GEN,General (non‑P1 sports),0,0

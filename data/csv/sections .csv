@@ -1,0 +1,15 @@
+section_code,section_name,prohibited_period,specified_flag
+S0,Non-approved substances,all_time,specified
+S1,Anabolic agents,all_time,non-specified
+S2,"Peptide hormones, growth factors, related substances, and mimetics",all_time,non-specified
+S3,Beta-2 agonists,all_time,specified
+S4,Hormone and metabolic modulators,all_time,mixed
+S5,Diuretics and masking agents,all_time,specified
+S6,Stimulants,in_comp,mixed
+S7,Narcotics,in_comp,specified
+S8,Cannabinoids,in_comp,specified
+S9,Glucocorticoids,in_comp,specified
+M1,Manipulation of blood and blood components,all_time,non-specified
+M2,Chemical and physical manipulation,all_time,mixed
+M3,Gene and cell doping,all_time,non-specified
+P1,Beta-blockers,sport_specific,specified

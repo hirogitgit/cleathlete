@@ -1,0 +1,10 @@
+inn,route,dose_limit_24h,dose_unit,urine_threshold_ng_ml
+salbutamol,inhaled,1600,µg,1000
+formoterol,inhaled,54,µg,40
+salmeterol,inhaled,200,µg,
+vilanterol,inhaled,25,µg,
+cathine,,,,5000
+ephedrine,,,,10000
+methylephedrine,,,,10000
+pseudoephedrine,,,,150000
+carboxy-thc,,,,150
