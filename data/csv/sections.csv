@@ -1,0 +1,12 @@
+section_code,section_name,initial_flag,prohibited_periodo,prohibited_route,permitted_route,specified_flag
+S0,Non-approved substances,,,,,specified
+S1,Anabolic agents,red,both,,,non-specified
+S2,"Peptide hormones, growth factors, related substances, and mimetics",red,both,,,non-specified
+S3,Beta-2 agonists,red,both,,,specified
+S4,Hormone and metabolic modulators,red,both,,,mixed
+S5,Diuretics and masking agents,red,both,,,specified
+S6,Stimulants,yellow,in,,,mixed
+S7,Narcotics,yellow,in,,,specified
+S8,Cannabinoids,yellow,in,,,specified
+S9,Glucocorticoids,yellow,in,inject;oral;oromucosal;buccal;gingival;sublingual;rectal,inhaled;topical;dental-intracanal;dermal;intranasal;ophthalmological;otic;perianal,specified
+P1,Beta-blockers,yellow,in,,,"depend_on_sport",specified

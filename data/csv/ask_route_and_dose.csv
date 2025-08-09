@@ -1,0 +1,6 @@
+inn,section_code,initial_flag,permitted_route,prohibited_route,maximum_dose,dose_unit,urine_threshold_ng_ml,aliases
+salbutamol,S3,yellow,inhaled,,1600,µg,1000,
+formoterol,S3,yellow,inhaled,,54,µg,40,
+salmeterol,S3,yellow,inhaled,,200,µg,,
+vilanterol,S3,yellow,inhaled,,25,µg,,
+

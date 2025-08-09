@@ -1,0 +1,13 @@
+source_system,source_id,source_label
+RxClass:EPC,EPC_NSAID,Nonsteroidal Anti-inflammatory Drug [EPC]
+RxClass:EPC,EPC_H1Antagonist,Histamine H1 Antagonist [EPC]
+RxClass:EPC,EPC_H2ReceptorAntagonist,Histamine H2 Receptor Antagonist [EPC]
+RxClass:EPC,EPC_ProtonPumpInhibitor,Proton Pump Inhibitor [EPC]
+RxClass:EPC,EPC_Penicillin,Penicillin-class Antibacterial [EPC]
+RxClass:EPC,EPC_Cephalosporin,Cephalosporin-class Antibacterial [EPC]
+RxClass:EPC,EPC_Macrolide,Macrolide-class Antibacterial [EPC]
+RxClass:EPC,EPC_Tetracycline,Tetracycline-class Antibacterial [EPC]
+RxClass:EPC,EPC_Fluoroquinolone,Fluoroquinolone-class Antibacterial [EPC]
+RxClass:EPC,EPC_Expectorant,Expectorant [EPC]
+RxClass:EPC,EPC_AntitussiveNonOpioid,Non-Opioid Antitussive [EPC]
+RxClass:EPC,EPC_InhaledAnticholinergic,Inhaled Anticholinergic Bronchodilator [EPC]

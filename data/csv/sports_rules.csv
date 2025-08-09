@@ -1,10 +1,10 @@
-sport_code,sport_name_en,in_competition,out_competition
-ARCH,Archery,1,1
-SHOO,Shooting,1,1
-UWTR,Underwater sports,1,1
-AUTO,Automobile,1,0
-BILA,Billiards,1,0
-DART,Darts,1,0
-GOLF,Golf,1,0
-WMF,Mini‑golf,1,0
-GEN,General (non‑P1 sports),0,0
+sport_code,sport_name,governing_body,prohibited_section,prohibited_periodo,note
+WA_ARCH,Archery,WA,P1,both,"* also prohibited out-of-competition"
+ISSF_SHOT,Shooting,ISSF,P1,both,"* also prohibited out-of-competition"
+IPC_SHOT,Para-Shooting,IPC,P1,both,"* also prohibited out-of-competition"
+CMAS_UWF,Underwater sports – freediving & target,CMAS,P1,both,"* also prohibited out-of-competition"
+FIA_AUTO,Automobile sport,FIA,P1,in,
+WCBS_BIL,Billiards (all disciplines),WCBS,P1,in,
+WDF_DART,Darts,WDF,P1,in,
+IGF_GOLF,Golf,IGF,P1,in,
+WMF_MG,Mini-Golf,WMF,P1,in,

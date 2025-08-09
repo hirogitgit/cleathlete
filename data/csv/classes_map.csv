@@ -1,0 +1,23 @@
+source_system,source_id,source_label,mapped_section_code,notes
+RxClass:EPC,EPC_Corticosteroid,Corticosteroid [EPC],S9,Apply S9 route rules (in-comp oral/injectable/rectal/oromucosal prohibited; inhaled/topical etc. permitted within label).
+RxClass:MoA,MoA_Beta2AdrenergicReceptorAgonist,Beta2-Adrenergic Receptor Agonist [MoA],S3,Inhaled dose checks: salbutamol/formoterol/salmeterol/vilanterol.
+RxClass:EPC,EPC_CNSStimulant,Central Nervous System Stimulant [EPC],S6,"In-competition only; see exemptions (e.g., imidazoline derivatives topical/nasal/ophthalmic/otic)."
+RxClass:EPC,EPC_Diuretic,Diuretic [EPC],S5,See exemptions: drospirenone; pamabrom; topical ophthalmic carbonic anhydrase inhibitors.
+RxClass:EPC,EPC_CarbonicAnhydraseInhibitor,Carbonic Anhydrase Inhibitor [EPC],S5,Ophthalmic topical local administration allowed (exemption).
+RxClass:EPC,EPC_OpioidAgonist,Opioid Agonist [EPC],S7,In-competition only; exclude codeine via exemptions.
+RxClass:EPC,EPC_Cannabinoid,Cannabinoid [EPC],S8,In-competition only; cannabidiol (CBD) allowed.
+RxClass:EPC,EPC_BetaBlocker,Beta-Adrenergic Blocking Agent [EPC],P1,Sport-specific rules; see sports_rules.csv.
+RxClass:EPC,EPC_AnabolicSteroid,Anabolic Steroid [EPC],S1,Prohibited at all times.
+RxClass:EPC,EPC_AromataseInhibitor,Aromatase Inhibitor [EPC],S4,Prohibited at all times (hormone and metabolic modulators).
+RxClass:EPC,EPC_SERM,Selective Estrogen Receptor Modulator [EPC],S4,Prohibited at all times.
+RxClass:EPC,EPC_ErythropoiesisStimulatingAgent,Erythropoiesis Stimulating Agent [EPC],S2,"ESAs (e.g., epoetin, darbepoetin)."
+RxClass:EPC,EPC_Erythropoietin,Erythropoietin [EPC],S2,EPO class.
+RxClass:EPC,EPC_Insulin,Insulin [EPC],S2,All insulin preparations.
+RxClass:EPC,EPC_GrowthHormone,Growth Hormone [EPC],S2,Somatropin and analogs.
+RxClass:MoA,MoA_GrowthHormoneSecretagogue,Growth Hormone Secretagogue [MoA],S2,GHRP/ghrelin receptor agonists.
+RxClass:EPC,EPC_Corticotropin,Corticotropin [EPC],S2,ACTH and analogs.
+RxClass:EPC,EPC_Gonadotropin,Gonadotropin [EPC],S2,hCG and LH (note: typically prohibited in males).
+RxClass:EPC,EPC_InsulinLikeGrowthFactor1,Insulin-like Growth Factor-1 [EPC],S2,IGF-1 and analogs.
+RxClass:EPC,EPC_PlateletDerivedGrowthFactor,Platelet-Derived Growth Factor [EPC],S2,Growth factor.
+RxClass:EPC,EPC_VascularEndothelialGrowthFactor,Vascular Endothelial Growth Factor [EPC],S2,Growth factor.
+RxClass:EPC,EPC_MyostatinInhibitor,Myostatin Inhibitor [EPC],S2,Myostatin pathway inhibitors (follistatin etc.).
